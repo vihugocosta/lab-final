@@ -1,0 +1,51 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2026-11-24T23:23:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8080,"protocol":"TCP"}:
+              .: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: kubectl-expose
+      operation: Update
+      time: "2026-11-24T23:23:57Z"
+    name: vitrine
+    namespace: victor-dev
+    resourceVersion: "13785418"
+    uid: d109fb43-92f8-4aa9-8734-4999a5ea55b6
+  spec:
+    clusterIP: 172.30.204.214
+    clusterIPs:
+    - 172.30.204.214
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: vitrine
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "13795271"

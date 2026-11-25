@@ -1,0 +1,38 @@
+2026-11-24T23:17:00.244903300Z time="2026-11-24T23:17:00Z" level=info msg="Not using native diff for overlay, this may cause degraded performance for building images: kernel has CONFIG_OVERLAY_FS_REDIRECT_DIR enabled"
+2026-11-24T23:17:00.247026600Z I1124 23:17:00.246910       1 defaults.go:112] Defaulting to storage driver "overlay" with options [mountopt=metacopy=on].
+2026-11-24T23:17:00.271536500Z Caching blobs under "/var/cache/blobs".
+2026-11-24T23:17:00.282499700Z 
+2026-11-24T23:17:00.282499700Z Pulling image registry.access.redhat.com/ubi9/nginx-126 ...
+2026-11-24T23:17:00.293602300Z Trying to pull registry.access.redhat.com/ubi9/nginx-126:latest...
+2026-11-24T23:17:02.074056600Z Getting image source signatures
+2026-11-24T23:17:02.074056600Z Copying blob sha256:5cdc9fa5b40d03513c0355a26a67272e73da6da4995315d5c739eea66ff30fcd
+2026-11-24T23:17:02.074056600Z Copying blob sha256:99ec3bd342c670e074fd170c036c3aadf5f80aaa17080cedc6a468210f2bf3c4
+2026-11-24T23:17:02.074056600Z Copying blob sha256:b02847f919c7ce0b8e2fdf6867f5ecf39e26c2ab8695b373d65c2aa0b1eb7288
+2026-11-24T23:17:29.883929900Z Copying config sha256:98b747822c3127a77e29bfa421c134e396dd9d8d78e8dd08a71f6e30ce27eb16
+2026-11-24T23:17:29.926911700Z Writing manifest to image destination
+2026-11-24T23:17:30.069538600Z Adding transient rw bind mount for /run/secrets/rhsm
+2026-11-24T23:17:30.073020100Z STEP 1/6: FROM registry.access.redhat.com/ubi9/nginx-126
+2026-11-24T23:17:30.104036800Z STEP 2/6: COPY index.html /opt/app-root/src/index.html
+2026-11-24T23:17:33.238248200Z --> 0256fb037f18
+2026-11-24T23:17:33.262045000Z STEP 3/6: EXPOSE 8080
+2026-11-24T23:17:33.399503000Z --> fdbe81aad46a
+2026-11-24T23:17:33.422559500Z STEP 4/6: CMD ["nginx","-g","daemon off;"]
+2026-11-24T23:17:33.569568100Z --> e3f22582df0e
+2026-11-24T23:17:33.588519500Z STEP 5/6: ENV "OPENSHIFT_BUILD_NAME"="agenda-1" "OPENSHIFT_BUILD_NAMESPACE"="victor-dev" "OPENSHIFT_BUILD_SOURCE"="https://github.com/vihugocosta/lab3-openshift-app.git" "OPENSHIFT_BUILD_REFERENCE"="main" "OPENSHIFT_BUILD_COMMIT"="392a235366e78ccd286afc317a82c5eaaac2176e"
+2026-11-24T23:17:33.697417000Z --> 3be4469fe1d2
+2026-11-24T23:17:33.718867200Z STEP 6/6: LABEL "io.openshift.build.commit.author"="Pedro Ximenes <phximenes@gmail.com>" "io.openshift.build.commit.date"="Sun Nov 22 04:03:03 2026 -0300" "io.openshift.build.commit.id"="392a235366e78ccd286afc317a82c5eaaac2176e" "io.openshift.build.commit.message"="Material de partida do laboratório final" "io.openshift.build.commit.ref"="main" "io.openshift.build.name"="agenda-1" "io.openshift.build.namespace"="victor-dev" "io.openshift.build.source-location"="https://github.com/vihugocosta/lab3-openshift-app.git"
+2026-11-24T23:17:33.806350000Z COMMIT temp.builder.openshift.io/victor-dev/agenda-1:b489ed1b
+2026-11-24T23:17:33.846554200Z --> 198b8ee7af06
+2026-11-24T23:17:33.846610400Z Successfully tagged temp.builder.openshift.io/victor-dev/agenda-1:b489ed1b
+2026-11-24T23:17:33.957672300Z 198b8ee7af066b14f55857017000db8f424ffa8607bcc733c8694d319f4b86f5
+2026-11-24T23:17:34.032138600Z Getting image source signatures
+2026-11-24T23:17:34.032138600Z Copying blob sha256:42092ce3e21dc8614834e75932c9742f822b6ad1ad71ed1096d5e4223ac7515a
+2026-11-24T23:17:34.032138600Z Copying blob sha256:99ec3bd342c670e074fd170c036c3aadf5f80aaa17080cedc6a468210f2bf3c4
+2026-11-24T23:17:34.032138600Z Copying blob sha256:5cdc9fa5b40d03513c0355a26a67272e73da6da4995315d5c739eea66ff30fcd
+2026-11-24T23:17:34.032138600Z Copying blob sha256:b02847f919c7ce0b8e2fdf6867f5ecf39e26c2ab8695b373d65c2aa0b1eb7288
+2026-11-24T23:17:34.032209600Z 
+2026-11-24T23:17:34.032209600Z Pushing image image-registry.openshift-image-registry.svc:5000/victor-dev/agenda:v1 ...
+2026-11-24T23:17:38.355759200Z Copying config sha256:198b8ee7af066b14f55857017000db8f424ffa8607bcc733c8694d319f4b86f5
+2026-11-24T23:17:38.462900700Z Writing manifest to image destination
+2026-11-24T23:17:38.532882300Z Successfully pushed image-registry.openshift-image-registry.svc:5000/victor-dev/agenda@sha256:4cf9c5bbd33457366d3279b2dc7124d1336e3312f01c1c7940bb74ad966fc4fa
+2026-11-24T23:17:38.578252800Z Push successful

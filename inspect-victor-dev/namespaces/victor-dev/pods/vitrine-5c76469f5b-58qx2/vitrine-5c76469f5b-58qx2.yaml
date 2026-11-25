@@ -1,0 +1,332 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.195/23"],"mac_address":"0a:58:0a:80:00:c3","gateway_ips":["10.128.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.0.1"},{"dest":"169.254.0.5/32","nextHop":"10.128.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.0.1"}],"ip_address":"10.128.0.195/23","gateway_ip":"10.128.0.1","role":"primary"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.195"
+          ],
+          "mac": "0a:58:0a:80:00:c3",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    security.openshift.io/validated-scc-subject-type: user
+  creationTimestamp: "2026-11-24T23:26:09Z"
+  generateName: vitrine-5c76469f5b-
+  generation: 1
+  labels:
+    app: vitrine
+    pod-template-hash: 5c76469f5b
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: cluster-riopomba
+    operation: Update
+    subresource: status
+    time: "2026-11-24T23:26:09Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"333281da-eb73-4252-b9e1-8c768bf0a03a"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"nginx"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8080,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:protocol: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/opt/app-root/etc/nginx.default.d"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/opt/app-root/src/arquivos"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"arquivos-agenda-pvc"}:
+            .: {}
+            f:name: {}
+            f:persistentVolumeClaim:
+              .: {}
+              f:claimName: {}
+          k:{"name":"nginx-default-config"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2026-11-24T23:26:09Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2026-11-24T23:26:12Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:observedGeneration: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:observedGeneration: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:observedGeneration: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            f:observedGeneration: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:observedGeneration: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:observedGeneration: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.195"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2026-11-24T23:26:15Z"
+  name: vitrine-5c76469f5b-58qx2
+  namespace: victor-dev
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: vitrine-5c76469f5b
+    uid: 333281da-eb73-4252-b9e1-8c768bf0a03a
+  resourceVersion: "13786795"
+  uid: ed737f91-40ea-44d9-a18c-f125b9929929
+spec:
+  containers:
+  - command:
+    - nginx
+    - -g
+    - daemon off;
+    image: registry.access.redhat.com/ubi9/nginx-126:latest
+    imagePullPolicy: Always
+    name: nginx
+    ports:
+    - containerPort: 8080
+      protocol: TCP
+    resources: {}
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1001750000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /opt/app-root/etc/nginx.default.d
+      name: nginx-default-config
+      readOnly: true
+    - mountPath: /opt/app-root/src/arquivos
+      name: arquivos-agenda-pvc
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-s7bqv
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: agenda-sa-dockercfg-bwfb6
+  nodeName: cluster-riopomba
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1001750000
+    seLinuxOptions:
+      level: s0:c42,c14
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: agenda-sa
+  serviceAccountName: agenda-sa
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - configMap:
+      defaultMode: 420
+      name: vitrine-nginx
+    name: nginx-default-config
+  - name: arquivos-agenda-pvc
+    persistentVolumeClaim:
+      claimName: arquivos-agenda-pvc
+  - name: kube-api-access-s7bqv
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-11-24T23:26:15Z"
+    observedGeneration: 1
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-11-24T23:26:11Z"
+    observedGeneration: 1
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-11-24T23:26:15Z"
+    observedGeneration: 1
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-11-24T23:26:15Z"
+    observedGeneration: 1
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-11-24T23:26:09Z"
+    observedGeneration: 1
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://dd31aebfde7527eee50eb26652ce9149e3c911541b2394e819112c87a47e2984
+    image: registry.access.redhat.com/ubi9/nginx-126:latest
+    imageID: registry.access.redhat.com/ubi9/nginx-126@sha256:84a9a99efbefa521e343e739883d2ef3c994becd3bb6eecc99f79aa274fa8bea
+    lastState: {}
+    name: nginx
+    ready: true
+    resources: {}
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-11-24T23:26:14Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        - 1001750000
+        uid: 1001750000
+    volumeMounts:
+    - mountPath: /opt/app-root/etc/nginx.default.d
+      name: nginx-default-config
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /opt/app-root/src/arquivos
+      name: arquivos-agenda-pvc
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-s7bqv
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 172.20.36.90
+  hostIPs:
+  - ip: 172.20.36.90
+  observedGeneration: 1
+  phase: Running
+  podIP: 10.128.0.195
+  podIPs:
+  - ip: 10.128.0.195
+  qosClass: BestEffort
+  startTime: "2026-11-24T23:26:11Z"

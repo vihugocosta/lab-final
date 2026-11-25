@@ -1,0 +1,88 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/description: ""
+    openshift.io/display-name: Agenda Victor dev
+    openshift.io/requester: victor.menezes
+    openshift.io/sa.scc.mcs: s0:c42,c14
+    openshift.io/sa.scc.supplemental-groups: 1001750000/10000
+    openshift.io/sa.scc.uid-range: 1001750000/10000
+    security.openshift.io/MinimallySufficientPodSecurityStandard: baseline
+  creationTimestamp: "2026-11-24T22:14:06Z"
+  labels:
+    kubernetes.io/metadata.name: victor-dev
+    openshift-pipelines.tekton.dev/namespace-reconcile-version: 1.24.3
+    openshift-pipelines.tekton.dev/namespace-trusted-configmaps-version: 1.24.3
+    pod-security.kubernetes.io/audit: baseline
+    pod-security.kubernetes.io/audit-version: latest
+    pod-security.kubernetes.io/warn: baseline
+    pod-security.kubernetes.io/warn-version: latest
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Apply
+    time: "2026-11-24T22:14:07Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:security.openshift.io/MinimallySufficientPodSecurityStandard: {}
+        f:labels:
+          f:pod-security.kubernetes.io/audit: {}
+          f:pod-security.kubernetes.io/audit-version: {}
+          f:pod-security.kubernetes.io/warn: {}
+          f:pod-security.kubernetes.io/warn-version: {}
+    manager: pod-security-admission-label-synchronization-controller
+    operation: Apply
+    time: "2026-11-24T22:14:14Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/description: {}
+          f:openshift.io/display-name: {}
+          f:openshift.io/requester: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+    manager: openshift-apiserver
+    operation: Update
+    time: "2026-11-24T22:14:06Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:finalizers: {}
+    manager: openshift-controller-manager
+    operation: Update
+    subresource: finalize
+    time: "2026-11-24T22:14:07Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:openshift-pipelines.tekton.dev/namespace-reconcile-version: {}
+          f:openshift-pipelines.tekton.dev/namespace-trusted-configmaps-version: {}
+    manager: openshift-pipelines-operator
+    operation: Update
+    time: "2026-11-24T22:14:14Z"
+  name: victor-dev
+  resourceVersion: "13746661"
+  uid: 9adb76dd-4871-4248-ba96-448e3bd8c93f
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

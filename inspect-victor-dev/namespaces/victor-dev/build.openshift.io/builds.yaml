@@ -1,0 +1,543 @@
+---
+apiVersion: build.openshift.io/v1
+items:
+- apiVersion: build.openshift.io/v1
+  kind: Build
+  metadata:
+    annotations:
+      openshift.io/build-config.name: agenda
+      openshift.io/build.number: "1"
+      openshift.io/build.pod-name: agenda-1-build
+    creationTimestamp: "2026-11-24T23:16:19Z"
+    generation: 2
+    labels:
+      buildconfig: agenda
+      openshift.io/build-config.name: agenda
+      openshift.io/build.start-policy: Serial
+    managedFields:
+    - apiVersion: build.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:openshift.io/build-config.name: {}
+            f:openshift.io/build.number: {}
+          f:labels:
+            .: {}
+            f:buildconfig: {}
+            f:openshift.io/build-config.name: {}
+            f:openshift.io/build.start-policy: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"07802954-848d-46f9-b3bf-fe987e67963b"}: {}
+        f:spec:
+          f:output:
+            f:to: {}
+          f:serviceAccount: {}
+          f:source:
+            f:git:
+              .: {}
+              f:ref: {}
+              f:uri: {}
+            f:type: {}
+          f:strategy:
+            f:dockerStrategy:
+              .: {}
+              f:dockerfilePath: {}
+            f:type: {}
+          f:triggeredBy: {}
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"New"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:status: {}
+              f:type: {}
+          f:config: {}
+      manager: openshift-apiserver
+      operation: Update
+      time: "2026-11-24T23:16:19Z"
+    - apiVersion: build.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:openshift.io/build.pod-name: {}
+        f:spec:
+          f:output:
+            f:pushSecret: {}
+        f:status:
+          f:completionTimestamp: {}
+          f:duration: {}
+          f:outputDockerImageReference: {}
+          f:phase: {}
+          f:startTimestamp: {}
+      manager: openshift-controller-manager
+      operation: Update
+      time: "2026-11-24T23:17:41Z"
+    name: agenda-1
+    namespace: victor-dev
+    ownerReferences:
+    - apiVersion: build.openshift.io/v1
+      controller: true
+      kind: BuildConfig
+      name: agenda
+      uid: 07802954-848d-46f9-b3bf-fe987e67963b
+    resourceVersion: "13782219"
+    uid: 690d0d22-51d2-40c8-85d3-2cc9e5fb2a50
+  spec:
+    nodeSelector: null
+    output:
+      pushSecret:
+        name: builder-dockercfg-7nmlf
+      to:
+        kind: ImageStreamTag
+        name: agenda:v1
+    postCommit: {}
+    resources: {}
+    revision:
+      git:
+        author:
+          email: phximenes@gmail.com
+          name: Pedro Ximenes
+        commit: 392a235366e78ccd286afc317a82c5eaaac2176e
+        committer:
+          email: phximenes@gmail.com
+          name: Pedro Ximenes
+        message: Material de partida do laboratório final
+      type: Git
+    serviceAccount: builder
+    source:
+      git:
+        ref: main
+        uri: https://github.com/vihugocosta/lab3-openshift-app.git
+      type: Git
+    strategy:
+      dockerStrategy:
+        dockerfilePath: Dockerfile
+      type: Docker
+    triggeredBy:
+    - message: Build configuration change
+  status:
+    completionTimestamp: "2026-11-24T23:17:41Z"
+    conditions:
+    - lastTransitionTime: "2026-11-24T23:16:19Z"
+      lastUpdateTime: "2026-11-24T23:16:19Z"
+      status: "False"
+      type: New
+    - lastTransitionTime: "2026-11-24T23:16:54Z"
+      lastUpdateTime: "2026-11-24T23:16:54Z"
+      status: "False"
+      type: Pending
+    - lastTransitionTime: "2026-11-24T23:17:41Z"
+      lastUpdateTime: "2026-11-24T23:17:41Z"
+      status: "False"
+      type: Running
+    - lastTransitionTime: "2026-11-24T23:17:41Z"
+      lastUpdateTime: "2026-11-24T23:17:41Z"
+      status: "True"
+      type: Complete
+    config:
+      kind: BuildConfig
+      name: agenda
+      namespace: victor-dev
+    duration: 82000000000
+    output:
+      to:
+        imageDigest: sha256:4cf9c5bbd33457366d3279b2dc7124d1336e3312f01c1c7940bb74ad966fc4fa
+    outputDockerImageReference: image-registry.openshift-image-registry.svc:5000/victor-dev/agenda:v1
+    phase: Complete
+    stages:
+    - durationMilliseconds: 669
+      name: FetchInputs
+      startTime: "2026-11-24T23:16:54Z"
+      steps:
+      - durationMilliseconds: 669
+        name: FetchGitSource
+        startTime: "2026-11-24T23:16:54Z"
+    - durationMilliseconds: 29781
+      name: PullImages
+      startTime: "2026-11-24T23:17:00Z"
+      steps:
+      - durationMilliseconds: 29781
+        name: PullBaseImage
+        startTime: "2026-11-24T23:17:00Z"
+    - durationMilliseconds: 3893
+      name: Build
+      startTime: "2026-11-24T23:17:30Z"
+      steps:
+      - durationMilliseconds: 3893
+        name: DockerBuild
+        startTime: "2026-11-24T23:17:30Z"
+    - durationMilliseconds: 4521
+      name: PushImage
+      startTime: "2026-11-24T23:17:34Z"
+      steps:
+      - durationMilliseconds: 4521
+        name: PushDockerImage
+        startTime: "2026-11-24T23:17:34Z"
+    startTimestamp: "2026-11-24T23:16:19Z"
+- apiVersion: build.openshift.io/v1
+  kind: Build
+  metadata:
+    annotations:
+      openshift.io/build-config.name: agenda
+      openshift.io/build.number: "2"
+      openshift.io/build.pod-name: agenda-2-build
+    creationTimestamp: "2026-11-24T23:16:19Z"
+    generation: 2
+    labels:
+      buildconfig: agenda
+      openshift.io/build-config.name: agenda
+      openshift.io/build.start-policy: Serial
+    managedFields:
+    - apiVersion: build.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:openshift.io/build-config.name: {}
+            f:openshift.io/build.number: {}
+          f:labels:
+            .: {}
+            f:buildconfig: {}
+            f:openshift.io/build-config.name: {}
+            f:openshift.io/build.start-policy: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"07802954-848d-46f9-b3bf-fe987e67963b"}: {}
+        f:spec:
+          f:output:
+            f:to: {}
+          f:serviceAccount: {}
+          f:source:
+            f:git:
+              .: {}
+              f:ref: {}
+              f:uri: {}
+            f:type: {}
+          f:strategy:
+            f:dockerStrategy:
+              .: {}
+              f:dockerfilePath: {}
+            f:type: {}
+          f:triggeredBy: {}
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"New"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:status: {}
+              f:type: {}
+          f:config: {}
+      manager: openshift-apiserver
+      operation: Update
+      time: "2026-11-24T23:16:19Z"
+    - apiVersion: build.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:openshift.io/build.pod-name: {}
+        f:spec:
+          f:output:
+            f:pushSecret: {}
+        f:status:
+          f:completionTimestamp: {}
+          f:duration: {}
+          f:outputDockerImageReference: {}
+          f:phase: {}
+          f:startTimestamp: {}
+      manager: openshift-controller-manager
+      operation: Update
+      time: "2026-11-24T23:18:16Z"
+    name: agenda-2
+    namespace: victor-dev
+    ownerReferences:
+    - apiVersion: build.openshift.io/v1
+      controller: true
+      kind: BuildConfig
+      name: agenda
+      uid: 07802954-848d-46f9-b3bf-fe987e67963b
+    resourceVersion: "13782527"
+    uid: e9cbd753-41ed-4675-9ca8-d8bbf76445d6
+  spec:
+    nodeSelector: null
+    output:
+      pushSecret:
+        name: builder-dockercfg-7nmlf
+      to:
+        kind: ImageStreamTag
+        name: agenda:v1
+    postCommit: {}
+    resources: {}
+    revision:
+      git:
+        author:
+          email: phximenes@gmail.com
+          name: Pedro Ximenes
+        commit: 392a235366e78ccd286afc317a82c5eaaac2176e
+        committer:
+          email: phximenes@gmail.com
+          name: Pedro Ximenes
+        message: Material de partida do laboratório final
+      type: Git
+    serviceAccount: builder
+    source:
+      git:
+        ref: main
+        uri: https://github.com/vihugocosta/lab3-openshift-app.git
+      type: Git
+    strategy:
+      dockerStrategy:
+        dockerfilePath: Dockerfile
+      type: Docker
+    triggeredBy:
+    - message: Manually triggered
+  status:
+    completionTimestamp: "2026-11-24T23:18:16Z"
+    conditions:
+    - lastTransitionTime: "2026-11-24T23:17:41Z"
+      lastUpdateTime: "2026-11-24T23:17:41Z"
+      status: "False"
+      type: New
+    - lastTransitionTime: "2026-11-24T23:17:45Z"
+      lastUpdateTime: "2026-11-24T23:17:45Z"
+      status: "False"
+      type: Pending
+    - lastTransitionTime: "2026-11-24T23:18:16Z"
+      lastUpdateTime: "2026-11-24T23:18:16Z"
+      status: "False"
+      type: Running
+    - lastTransitionTime: "2026-11-24T23:18:16Z"
+      lastUpdateTime: "2026-11-24T23:18:16Z"
+      status: "True"
+      type: Complete
+    config:
+      kind: BuildConfig
+      name: agenda
+      namespace: victor-dev
+    duration: 34000000000
+    output:
+      to:
+        imageDigest: sha256:f7b090cf7e53738d87ba101fff71543ac6b184849349c0961db39e7b493227af
+    outputDockerImageReference: image-registry.openshift-image-registry.svc:5000/victor-dev/agenda:v1
+    phase: Complete
+    stages:
+    - durationMilliseconds: 616
+      name: FetchInputs
+      startTime: "2026-11-24T23:17:45Z"
+      steps:
+      - durationMilliseconds: 616
+        name: FetchGitSource
+        startTime: "2026-11-24T23:17:45Z"
+    - durationMilliseconds: 20519
+      name: PullImages
+      startTime: "2026-11-24T23:17:48Z"
+      steps:
+      - durationMilliseconds: 20519
+        name: PullBaseImage
+        startTime: "2026-11-24T23:17:48Z"
+    - durationMilliseconds: 3965
+      name: Build
+      startTime: "2026-11-24T23:18:09Z"
+      steps:
+      - durationMilliseconds: 3965
+        name: DockerBuild
+        startTime: "2026-11-24T23:18:09Z"
+    - durationMilliseconds: 409
+      name: PushImage
+      startTime: "2026-11-24T23:18:13Z"
+      steps:
+      - durationMilliseconds: 409
+        name: PushDockerImage
+        startTime: "2026-11-24T23:18:13Z"
+    startTimestamp: "2026-11-24T23:17:42Z"
+- apiVersion: build.openshift.io/v1
+  kind: Build
+  metadata:
+    annotations:
+      openshift.io/build-config.name: agenda
+      openshift.io/build.number: "3"
+      openshift.io/build.pod-name: agenda-3-build
+    creationTimestamp: "2026-11-24T23:19:21Z"
+    generation: 2
+    labels:
+      buildconfig: agenda
+      openshift.io/build-config.name: agenda
+      openshift.io/build.start-policy: Serial
+    managedFields:
+    - apiVersion: build.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:openshift.io/build-config.name: {}
+            f:openshift.io/build.number: {}
+          f:labels:
+            .: {}
+            f:buildconfig: {}
+            f:openshift.io/build-config.name: {}
+            f:openshift.io/build.start-policy: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"07802954-848d-46f9-b3bf-fe987e67963b"}: {}
+        f:spec:
+          f:output:
+            f:to: {}
+          f:serviceAccount: {}
+          f:source:
+            f:git:
+              .: {}
+              f:ref: {}
+              f:uri: {}
+            f:type: {}
+          f:strategy:
+            f:dockerStrategy:
+              .: {}
+              f:dockerfilePath: {}
+            f:type: {}
+          f:triggeredBy: {}
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"New"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:status: {}
+              f:type: {}
+          f:config: {}
+      manager: openshift-apiserver
+      operation: Update
+      time: "2026-11-24T23:19:21Z"
+    - apiVersion: build.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:openshift.io/build.pod-name: {}
+        f:spec:
+          f:output:
+            f:pushSecret: {}
+        f:status:
+          f:completionTimestamp: {}
+          f:duration: {}
+          f:outputDockerImageReference: {}
+          f:phase: {}
+          f:startTimestamp: {}
+      manager: openshift-controller-manager
+      operation: Update
+      time: "2026-11-24T23:20:11Z"
+    name: agenda-3
+    namespace: victor-dev
+    ownerReferences:
+    - apiVersion: build.openshift.io/v1
+      controller: true
+      kind: BuildConfig
+      name: agenda
+      uid: 07802954-848d-46f9-b3bf-fe987e67963b
+    resourceVersion: "13783542"
+    uid: 9085805b-41b4-42c5-ab70-2e2560127e9d
+  spec:
+    nodeSelector: null
+    output:
+      pushSecret:
+        name: builder-dockercfg-7nmlf
+      to:
+        kind: ImageStreamTag
+        name: agenda:v1
+    postCommit: {}
+    resources: {}
+    revision:
+      git:
+        author:
+          email: phximenes@gmail.com
+          name: Pedro Ximenes
+        commit: 392a235366e78ccd286afc317a82c5eaaac2176e
+        committer:
+          email: phximenes@gmail.com
+          name: Pedro Ximenes
+        message: Material de partida do laboratório final
+      type: Git
+    serviceAccount: builder
+    source:
+      git:
+        ref: main
+        uri: https://github.com/vihugocosta/lab3-openshift-app.git
+      type: Git
+    strategy:
+      dockerStrategy:
+        dockerfilePath: Dockerfile
+      type: Docker
+    triggeredBy:
+    - message: Manually triggered
+  status:
+    completionTimestamp: "2026-11-24T23:20:11Z"
+    conditions:
+    - lastTransitionTime: "2026-11-24T23:19:21Z"
+      lastUpdateTime: "2026-11-24T23:19:21Z"
+      status: "False"
+      type: New
+    - lastTransitionTime: "2026-11-24T23:19:25Z"
+      lastUpdateTime: "2026-11-24T23:19:25Z"
+      status: "False"
+      type: Pending
+    - lastTransitionTime: "2026-11-24T23:20:11Z"
+      lastUpdateTime: "2026-11-24T23:20:11Z"
+      status: "False"
+      type: Running
+    - lastTransitionTime: "2026-11-24T23:20:11Z"
+      lastUpdateTime: "2026-11-24T23:20:11Z"
+      status: "True"
+      type: Complete
+    config:
+      kind: BuildConfig
+      name: agenda
+      namespace: victor-dev
+    duration: 50000000000
+    output:
+      to:
+        imageDigest: sha256:171ea97d55249893a4cee6f071abfeb5d819ad43cd259e879240bbcf3666fe87
+    outputDockerImageReference: image-registry.openshift-image-registry.svc:5000/victor-dev/agenda:v1
+    phase: Complete
+    stages:
+    - durationMilliseconds: 642
+      name: FetchInputs
+      startTime: "2026-11-24T23:19:25Z"
+      steps:
+      - durationMilliseconds: 642
+        name: FetchGitSource
+        startTime: "2026-11-24T23:19:25Z"
+    - durationMilliseconds: 33306
+      name: PullImages
+      startTime: "2026-11-24T23:19:29Z"
+      steps:
+      - durationMilliseconds: 33306
+        name: PullBaseImage
+        startTime: "2026-11-24T23:19:29Z"
+    - durationMilliseconds: 5734
+      name: Build
+      startTime: "2026-11-24T23:20:02Z"
+      steps:
+      - durationMilliseconds: 5734
+        name: DockerBuild
+        startTime: "2026-11-24T23:20:02Z"
+    - durationMilliseconds: 459
+      name: PushImage
+      startTime: "2026-11-24T23:20:08Z"
+      steps:
+      - durationMilliseconds: 459
+        name: PushDockerImage
+        startTime: "2026-11-24T23:20:08Z"
+    startTimestamp: "2026-11-24T23:19:21Z"
+kind: BuildList
+metadata:
+  resourceVersion: "13795272"

@@ -1,0 +1,2376 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css" rel="stylesheet">
+
+    <title>Events</title>
+	<style type="text/css">
+      body * {
+       font-size: 12px!important;
+      }
+	  .text-overflow() {
+       overflow: hidden;
+	   text-overflow: ellipsis;
+	   white-space: nowrap;
+	  }
+      .truncated {
+        display: inline-block;
+        max-width: 200px;
+        .text-overflow();
+      }
+    </style>
+  </head>
+  <body>
+
+<table
+  id="events"
+  class="table table-bordered table-hover table-sm"
+  data-toggle="table"
+  data-search="true"
+  data-show-search-clear-button="true"
+  data-filter-control="true"
+  data-advanced-search="true"
+  data-id-table="advancedTable"
+  data-pagination="true"
+  data-page-size="100"
+  data-show-columns-toggle-all="true"
+  data-show-pagination-switch="true"
+  data-show-columns="true">
+  <thead>
+    <tr>
+      <th data-width="100" data-field="time" data-filter-control="input" data-sortable="true">Time</th>
+      <th data-width="200" data-field="namespace" data-filter-control="input" data-sortable="true">Namespace</th>
+      <th data-width="200" data-field="component" data-filter-control="input" data-sortable="true">Component</th>
+      <th data-width="200" data-field="relatedobject" data-filter-control="input" data-sortable="true">RelatedObject</th>
+      <th data-field="reason" data-filter-control="input">Reason</th>
+      <th data-field="message" data-filter-control="input" data-escape="true">Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:40:12 -0300 -03" title="First Seen: 00:00:00">19:40:12</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-9d77w</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-5c4dfbfc48-9d77w to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:01:57 -0300 -03" title="First Seen: 00:00:00">20:01:57</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-67f7466599-hkzrl</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-67f7466599-hkzrl to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:53:51 -0300 -03" title="First Seen: 00:00:00">19:53:51</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-antiga-7f65b7b4c7-vttxr</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-antiga-7f65b7b4c7-vttxr to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:26 -0300 -03" title="First Seen: 00:00:00">19:48:26</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-7ccd547546-xmpc2</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-7ccd547546-xmpc2 to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:26 -0300 -03" title="First Seen: 00:00:00">19:48:26</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-7ccd547546-st54j</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-7ccd547546-st54j to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:26 -0300 -03" title="First Seen: 00:00:00">19:48:26</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-7ccd547546-qbt8f</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-7ccd547546-qbt8f to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:49:32 -0300 -03" title="First Seen: 00:00:00">19:49:32</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-7ccd547546-hjwl8</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-7ccd547546-hjwl8 to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:12 -0300 -03" title="First Seen: 00:00:00">20:03:12</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-zrg47</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-7cb58b47bc-zrg47 to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:02 -0300 -03" title="First Seen: 00:00:00">20:03:02</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-9n6j2</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-7cb58b47bc-9n6j2 to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:07 -0300 -03" title="First Seen: 00:00:00">20:03:07</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-5rkvz</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-7cb58b47bc-5rkvz to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:01:57 -0300 -03" title="First Seen: 00:00:00">20:01:57</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-67f7466599-jgst4</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-67f7466599-jgst4 to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:19:21 -0300 -03" title="First Seen: 00:00:00">20:19:21</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">agenda-3-build</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/agenda-3-build to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:01:57 -0300 -03" title="First Seen: 00:00:00">20:01:57</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-67f7466599-52z6r</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-67f7466599-52z6r to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:09 -0300 -03" title="First Seen: 00:00:00">20:26:09</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-cg659</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-5c76469f5b-cg659 to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:17:41 -0300 -03" title="First Seen: 00:00:00">20:17:41</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">agenda-2-build</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/agenda-2-build to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:02 -0300 -03" title="First Seen: 00:00:00">20:26:02</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-c6qxh</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-5c76469f5b-c6qxh to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:09 -0300 -03" title="First Seen: 00:00:00">20:26:09</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-58qx2</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-5c76469f5b-58qx2 to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:16:19 -0300 -03" title="First Seen: 00:00:00">20:16:19</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">agenda-1-build</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/agenda-1-build to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:07 -0300 -03" title="First Seen: 00:00:00">19:37:07</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-kff2w</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-5c4dfbfc48-kff2w to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:33:42 -0300 -03" title="First Seen: 00:00:00">19:33:42</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">relogio-agenda</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/relogio-agenda to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:07 -0300 -03" title="First Seen: 00:00:00">19:37:07</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-pqp4v</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-5c4dfbfc48-pqp4v to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:27:43 -0300 -03" title="First Seen: 00:00:00">19:27:43</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">relogio-agenda</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/relogio-agenda to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:55:00 -0300 -03" title="First Seen: 00:00:00">19:55:00</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">instavel</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/instavel to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:07 -0300 -03" title="First Seen: 00:00:00">19:37:07</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-xbzqk</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned victor-dev/vitrine-5c4dfbfc48-xbzqk to cluster-riopomba</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:27:44 -0300 -03" title="First Seen: 19:27:44">19:27:44</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">relogio-agenda</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.107/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:27:47 -0300 -03" title="First Seen: 19:27:47">19:27:47</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">relogio-agenda</p></td>
+      <td><p class="text-danger">Failed</p></td>
+      <td data-formatter="messageFormatter">Failed to pull image &#34;registry.access.redhat.com/ubi9/ubi-minimal&#34;: unable to pull image or OCI artifact: pull image err: copying system image from manifest list: determining manifest MIME type for docker://registry.access.redhat.com/ubi9/ubi-minimal:latest: reading manifest sha256:2cb89feabb136a960f3e6d34f4bbcdff72404f3a18f43f01920e4a26ef389f18 in registry.access.redhat.com/ubi9/ubi-minimal: unauthorized: Access to the requested resource is not authorized; artifact err: image reference: reference is a container image, not an OCI artifact</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:27:47 -0300 -03" title="First Seen: 19:27:47">19:27:47</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">relogio-agenda</p></td>
+      <td><p class="text-danger">Failed</p></td>
+      <td data-formatter="messageFormatter">Error: ErrImagePull</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:27:48 -0300 -03" title="First Seen: 19:27:48">19:27:48</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">relogio-agenda</p></td>
+      <td><p class="text-danger">Failed</p></td>
+      <td data-formatter="messageFormatter">Error: ImagePullBackOff</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:27:48 -0300 -03" title="First Seen: 19:27:48">19:27:48</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">relogio-agenda</p></td>
+      <td><p class="text-danger">BackOff</p></td>
+      <td data-formatter="messageFormatter">Back-off pulling image &#34;registry.access.redhat.com/ubi9/ubi-minimal&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:28:01 -0300 -03" title="First Seen: 19:27:45">19:28:01</time> <small>(x2)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">relogio-agenda</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/ubi-minimal&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:28:03 -0300 -03" title="First Seen: 19:28:03">19:28:03</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">relogio-agenda</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:28:03 -0300 -03" title="First Seen: 19:28:03">19:28:03</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">relogio-agenda</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/ubi-minimal&#34; in 1.604s (1.604s including waiting). Image size: 108681661 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:28:03 -0300 -03" title="First Seen: 19:28:03">19:28:03</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">relogio-agenda</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:33:44 -0300 -03" title="First Seen: 19:33:44">19:33:44</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">relogio-agenda</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.124/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:33:44 -0300 -03" title="First Seen: 19:33:44">19:33:44</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">relogio-agenda</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/ubi-minimal&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:33:46 -0300 -03" title="First Seen: 19:33:46">19:33:46</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">relogio-agenda</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:33:46 -0300 -03" title="First Seen: 19:33:46">19:33:46</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">relogio-agenda</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/ubi-minimal&#34; in 1.504s (1.504s including waiting). Image size: 108681661 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:33:46 -0300 -03" title="First Seen: 19:33:46">19:33:46</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">relogio-agenda</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:07 -0300 -03" title="First Seen: 19:37:07">19:37:07</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-5c4dfbfc48-xbzqk</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:07 -0300 -03" title="First Seen: 19:37:07">19:37:07</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-5c4dfbfc48-pqp4v</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:07 -0300 -03" title="First Seen: 19:37:07">19:37:07</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">vitrine</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set vitrine-5c4dfbfc48 from 0 to 3</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:07 -0300 -03" title="First Seen: 19:37:07">19:37:07</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-5c4dfbfc48-kff2w</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:09 -0300 -03" title="First Seen: 19:37:09">19:37:09</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-pqp4v</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.126/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:10 -0300 -03" title="First Seen: 19:37:10">19:37:10</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-xbzqk</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.127/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:11 -0300 -03" title="First Seen: 19:37:11">19:37:11</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-kff2w</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.128/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:12 -0300 -03" title="First Seen: 19:37:12">19:37:12</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-pqp4v</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 2.695s (2.695s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:13 -0300 -03" title="First Seen: 19:37:13">19:37:13</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-xbzqk</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 3.055s (3.055s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:16 -0300 -03" title="First Seen: 19:37:16">19:37:16</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-kff2w</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 4.465s (4.465s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:17 -0300 -03" title="First Seen: 19:37:17">19:37:17</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-pqp4v</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 3.878s (3.878s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:17 -0300 -03" title="First Seen: 19:37:17">19:37:17</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-xbzqk</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 3.14s (3.14s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:19 -0300 -03" title="First Seen: 19:37:19">19:37:19</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-kff2w</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.722s (1.722s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:31 -0300 -03" title="First Seen: 19:37:31">19:37:31</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-xbzqk</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 2.79s (2.79s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:31 -0300 -03" title="First Seen: 19:37:31">19:37:31</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-pqp4v</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 3.152s (3.152s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:37:32 -0300 -03" title="First Seen: 19:37:32">19:37:32</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-kff2w</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.612s (1.612s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:38:00 -0300 -03" title="First Seen: 19:38:00">19:38:00</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-pqp4v</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 6.575s (6.575s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:38:01 -0300 -03" title="First Seen: 19:38:01">19:38:01</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-xbzqk</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 5.808s (5.808s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:38:03 -0300 -03" title="First Seen: 19:38:03">19:38:03</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-kff2w</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 5.277s (5.277s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:38:44 -0300 -03" title="First Seen: 19:38:44">19:38:44</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-pqp4v</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.795s (1.795s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:38:54 -0300 -03" title="First Seen: 19:37:11">19:38:54</time> <small>(x5)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-kff2w</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:38:56 -0300 -03" title="First Seen: 19:38:56">19:38:56</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-kff2w</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.619s (1.619s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:38:56 -0300 -03" title="First Seen: 19:37:16">19:38:56</time> <small>(x5)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-kff2w</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:38:56 -0300 -03" title="First Seen: 19:37:16">19:38:56</time> <small>(x5)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-kff2w</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:38:58 -0300 -03" title="First Seen: 19:38:58">19:38:58</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-xbzqk</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.815s (1.815s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:40:05 -0300 -03" title="First Seen: 19:37:19">19:40:05</time> <small>(x6)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-kff2w</p></td>
+      <td><p class="text-danger">BackOff</p></td>
+      <td data-formatter="messageFormatter">Back-off restarting failed container nginx-126 in pod vitrine-5c4dfbfc48-kff2w_victor-dev(6f629b79-8667-43e8-9657-905f53271fc5)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:40:12 -0300 -03" title="First Seen: 19:40:12">19:40:12</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-5c4dfbfc48-9d77w</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:40:14 -0300 -03" title="First Seen: 19:40:14">19:40:14</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-9d77w</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.129/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:40:15 -0300 -03" title="First Seen: 19:40:15">19:40:15</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-9d77w</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.649s (1.649s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:40:17 -0300 -03" title="First Seen: 19:40:17">19:40:17</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-pqp4v</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 6.625s (6.625s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:40:17 -0300 -03" title="First Seen: 19:37:12">19:40:17</time> <small>(x6)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-pqp4v</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:40:17 -0300 -03" title="First Seen: 19:37:12">19:40:17</time> <small>(x6)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-pqp4v</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:40:18 -0300 -03" title="First Seen: 19:40:18">19:40:18</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-9d77w</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.66s (1.66s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:40:28 -0300 -03" title="First Seen: 19:37:13">19:40:28</time> <small>(x6)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-xbzqk</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:40:28 -0300 -03" title="First Seen: 19:40:28">19:40:28</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-xbzqk</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.473s (1.473s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:40:28 -0300 -03" title="First Seen: 19:37:13">19:40:28</time> <small>(x6)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-xbzqk</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:40:33 -0300 -03" title="First Seen: 19:40:33">19:40:33</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-9d77w</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 2.039s (2.039s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:40:59 -0300 -03" title="First Seen: 19:40:59">19:40:59</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-9d77w</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.514s (1.514s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:41:55 -0300 -03" title="First Seen: 19:41:55">19:41:55</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-9d77w</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.94s (1.94s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:43:06 -0300 -03" title="First Seen: 19:43:06">19:43:06</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-pqp4v</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.845s (1.845s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:43:09 -0300 -03" title="First Seen: 19:37:10">19:43:09</time> <small>(x7)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-xbzqk</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:43:11 -0300 -03" title="First Seen: 19:43:11">19:43:11</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-xbzqk</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.77s (1.77s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:43:18 -0300 -03" title="First Seen: 19:40:16">19:43:18</time> <small>(x6)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-9d77w</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:43:18 -0300 -03" title="First Seen: 19:43:18">19:43:18</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-9d77w</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.574s (1.574s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:43:19 -0300 -03" title="First Seen: 19:40:16">19:43:19</time> <small>(x6)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-9d77w</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:46:10 -0300 -03" title="First Seen: 19:40:14">19:46:10</time> <small>(x7)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-9d77w</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:46:12 -0300 -03" title="First Seen: 19:46:12">19:46:12</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-9d77w</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.553s (1.553s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:47:00 -0300 -03" title="First Seen: 19:37:18">19:47:00</time> <small>(x13)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-xbzqk</p></td>
+      <td><p class="text-danger">BackOff</p></td>
+      <td data-formatter="messageFormatter">Back-off restarting failed container nginx-126 in pod vitrine-5c4dfbfc48-xbzqk_victor-dev(6cff5fe1-627b-4c8b-8838-cde5d6f5d51c)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:47:31 -0300 -03" title="First Seen: 19:40:19">19:47:31</time> <small>(x10)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-9d77w</p></td>
+      <td><p class="text-danger">BackOff</p></td>
+      <td data-formatter="messageFormatter">Back-off restarting failed container nginx-126 in pod vitrine-5c4dfbfc48-9d77w_victor-dev(b2692f5f-634c-43b1-98c5-c9a546408adf)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:13 -0300 -03" title="First Seen: 19:37:09">19:48:13</time> <small>(x8)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-pqp4v</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:16 -0300 -03" title="First Seen: 19:37:18">19:48:16</time> <small>(x15)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c4dfbfc48-pqp4v</p></td>
+      <td><p class="text-danger">BackOff</p></td>
+      <td data-formatter="messageFormatter">Back-off restarting failed container nginx-126 in pod vitrine-5c4dfbfc48-pqp4v_victor-dev(217a639b-359c-4e76-9668-b13322ead6f9)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:26 -0300 -03" title="First Seen: 19:48:26">19:48:26</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-7ccd547546</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-7ccd547546-xmpc2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:26 -0300 -03" title="First Seen: 19:48:26">19:48:26</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-7ccd547546</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-7ccd547546-st54j</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:26 -0300 -03" title="First Seen: 19:48:26">19:48:26</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-7ccd547546</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-7ccd547546-qbt8f</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:26 -0300 -03" title="First Seen: 19:48:26">19:48:26</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">vitrine</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set vitrine-7ccd547546 from 0 to 3</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:29 -0300 -03" title="First Seen: 19:48:29">19:48:29</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-st54j</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:29 -0300 -03" title="First Seen: 19:48:29">19:48:29</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-st54j</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.136/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:30 -0300 -03" title="First Seen: 19:48:30">19:48:30</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-qbt8f</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:30 -0300 -03" title="First Seen: 19:48:30">19:48:30</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-xmpc2</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.138/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:30 -0300 -03" title="First Seen: 19:48:30">19:48:30</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-qbt8f</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.137/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:30 -0300 -03" title="First Seen: 19:48:30">19:48:30</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-xmpc2</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:31 -0300 -03" title="First Seen: 19:48:31">19:48:31</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-qbt8f</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.717s (1.717s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:31 -0300 -03" title="First Seen: 19:48:31">19:48:31</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-st54j</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:31 -0300 -03" title="First Seen: 19:48:31">19:48:31</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-st54j</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.608s (1.608s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:31 -0300 -03" title="First Seen: 19:48:31">19:48:31</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-st54j</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:32 -0300 -03" title="First Seen: 19:48:32">19:48:32</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-qbt8f</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:32 -0300 -03" title="First Seen: 19:48:32">19:48:32</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-xmpc2</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:32 -0300 -03" title="First Seen: 19:48:32">19:48:32</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-xmpc2</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:32 -0300 -03" title="First Seen: 19:48:32">19:48:32</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-xmpc2</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.539s (1.539s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:48:32 -0300 -03" title="First Seen: 19:48:32">19:48:32</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-qbt8f</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:49:32 -0300 -03" title="First Seen: 19:49:32">19:49:32</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-7ccd547546</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-7ccd547546-hjwl8</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:49:32 -0300 -03" title="First Seen: 19:49:32">19:49:32</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-qbt8f</p></td>
+      <td><p class="text-danger">Killing</p></td>
+      <td data-formatter="messageFormatter">Stopping container nginx</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:49:34 -0300 -03" title="First Seen: 19:49:34">19:49:34</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-hjwl8</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.142/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:49:34 -0300 -03" title="First Seen: 19:49:34">19:49:34</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-hjwl8</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:49:36 -0300 -03" title="First Seen: 19:49:36">19:49:36</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-hjwl8</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:49:36 -0300 -03" title="First Seen: 19:49:36">19:49:36</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-hjwl8</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 2.039s (2.039s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:49:36 -0300 -03" title="First Seen: 19:49:36">19:49:36</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-hjwl8</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:53:51 -0300 -03" title="First Seen: 19:53:51">19:53:51</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-antiga-7f65b7b4c7</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-antiga-7f65b7b4c7-vttxr</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:53:51 -0300 -03" title="First Seen: 19:53:51">19:53:51</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">vitrine-antiga</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set vitrine-antiga-7f65b7b4c7 from 0 to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:53:52 -0300 -03" title="First Seen: 19:53:52">19:53:52</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-antiga-7f65b7b4c7-vttxr</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.148/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:54:37 -0300 -03" title="First Seen: 19:53:52">19:54:37</time> <small>(x3)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-antiga-7f65b7b4c7-vttxr</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:versao-antiga&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:54:39 -0300 -03" title="First Seen: 19:53:54">19:54:39</time> <small>(x3)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-antiga-7f65b7b4c7-vttxr</p></td>
+      <td><p class="text-danger">Failed</p></td>
+      <td data-formatter="messageFormatter">Error: ErrImagePull</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:54:39 -0300 -03" title="First Seen: 19:53:54">19:54:39</time> <small>(x3)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-antiga-7f65b7b4c7-vttxr</p></td>
+      <td><p class="text-danger">Failed</p></td>
+      <td data-formatter="messageFormatter">Failed to pull image &#34;registry.access.redhat.com/ubi9/nginx-126:versao-antiga&#34;: unable to pull image or OCI artifact: pull image err: initializing source docker://registry.access.redhat.com/ubi9/nginx-126:versao-antiga: reading manifest versao-antiga in registry.access.redhat.com/ubi9/nginx-126: manifest unknown; artifact err: image reference: get manifest from ref: create image source: reading manifest versao-antiga in registry.access.redhat.com/ubi9/nginx-126: manifest unknown</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:54:49 -0300 -03" title="First Seen: 19:53:54">19:54:49</time> <small>(x3)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-antiga-7f65b7b4c7-vttxr</p></td>
+      <td><p class="text-danger">Failed</p></td>
+      <td data-formatter="messageFormatter">Error: ImagePullBackOff</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:54:49 -0300 -03" title="First Seen: 19:53:54">19:54:49</time> <small>(x3)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-antiga-7f65b7b4c7-vttxr</p></td>
+      <td><p class="text-danger">BackOff</p></td>
+      <td data-formatter="messageFormatter">Back-off pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:versao-antiga&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:55:03 -0300 -03" title="First Seen: 19:55:03">19:55:03</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">instavel</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.149/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:55:05 -0300 -03" title="First Seen: 19:55:05">19:55:05</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">instavel</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/ubi-minimal&#34; in 1.526s (1.526s including waiting). Image size: 108681661 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:55:08 -0300 -03" title="First Seen: 19:55:08">19:55:08</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">instavel</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/ubi-minimal&#34; in 1.752s (1.752s including waiting). Image size: 108681661 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:55:23 -0300 -03" title="First Seen: 19:55:23">19:55:23</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">instavel</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/ubi-minimal&#34; in 1.423s (1.423s including waiting). Image size: 108681661 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:55:51 -0300 -03" title="First Seen: 19:55:51">19:55:51</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">instavel</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/ubi-minimal&#34; in 1.669s (1.669s including waiting). Image size: 108681661 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:56:41 -0300 -03" title="First Seen: 19:56:41">19:56:41</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">instavel</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/ubi-minimal&#34; in 1.539s (1.539s including waiting). Image size: 108681661 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:58:04 -0300 -03" title="First Seen: 19:55:03">19:58:04</time> <small>(x6)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">instavel</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/ubi-minimal&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:58:06 -0300 -03" title="First Seen: 19:58:06">19:58:06</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">instavel</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/ubi-minimal&#34; in 2.146s (2.146s including waiting). Image size: 108681661 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:58:07 -0300 -03" title="First Seen: 19:55:06">19:58:07</time> <small>(x6)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">instavel</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:58:07 -0300 -03" title="First Seen: 19:55:05">19:58:07</time> <small>(x6)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">instavel</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 19:59:35 -0300 -03" title="First Seen: 19:55:09">19:59:35</time> <small>(x8)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">instavel</p></td>
+      <td><p class="text-danger">BackOff</p></td>
+      <td data-formatter="messageFormatter">Back-off restarting failed container instavel in pod instavel_victor-dev(978caa7e-095e-4a71-9a7a-e2379e351d19)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:01:56 -0300 -03" title="First Seen: 20:01:56">20:01:56</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-st54j</p></td>
+      <td><p class="text-danger">Killing</p></td>
+      <td data-formatter="messageFormatter">Stopping container nginx</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:01:57 -0300 -03" title="First Seen: 20:01:57">20:01:57</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-67f7466599</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-67f7466599-52z6r</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:01:57 -0300 -03" title="First Seen: 20:01:57">20:01:57</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-hjwl8</p></td>
+      <td><p class="text-danger">Killing</p></td>
+      <td data-formatter="messageFormatter">Stopping container nginx</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:01:57 -0300 -03" title="First Seen: 20:01:57">20:01:57</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7ccd547546-xmpc2</p></td>
+      <td><p class="text-danger">Killing</p></td>
+      <td data-formatter="messageFormatter">Stopping container nginx</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:01:57 -0300 -03" title="First Seen: 20:01:57">20:01:57</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">vitrine</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set vitrine-67f7466599 from 0 to 3</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:01:57 -0300 -03" title="First Seen: 20:01:57">20:01:57</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-67f7466599</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-67f7466599-jgst4</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:01:57 -0300 -03" title="First Seen: 20:01:57">20:01:57</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-67f7466599</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-67f7466599-hkzrl</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:02:01 -0300 -03" title="First Seen: 20:02:01">20:02:01</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-67f7466599-jgst4</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:02:01 -0300 -03" title="First Seen: 20:02:01">20:02:01</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-67f7466599-jgst4</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.155/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:02:02 -0300 -03" title="First Seen: 20:02:02">20:02:02</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-67f7466599-hkzrl</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:02:02 -0300 -03" title="First Seen: 20:02:02">20:02:02</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-67f7466599-hkzrl</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.156/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:02:03 -0300 -03" title="First Seen: 20:02:03">20:02:03</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-67f7466599-jgst4</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:02:03 -0300 -03" title="First Seen: 20:02:03">20:02:03</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-67f7466599-jgst4</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:02:03 -0300 -03" title="First Seen: 20:02:03">20:02:03</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-67f7466599-jgst4</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.783s (1.783s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:02:04 -0300 -03" title="First Seen: 20:02:04">20:02:04</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-67f7466599-hkzrl</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.823s (1.823s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:02:04 -0300 -03" title="First Seen: 20:02:04">20:02:04</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-67f7466599-52z6r</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.157/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:02:04 -0300 -03" title="First Seen: 20:02:04">20:02:04</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-67f7466599-52z6r</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:02:04 -0300 -03" title="First Seen: 20:02:04">20:02:04</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-67f7466599-hkzrl</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:02:04 -0300 -03" title="First Seen: 20:02:04">20:02:04</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-67f7466599-hkzrl</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:02:05 -0300 -03" title="First Seen: 20:02:05">20:02:05</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-67f7466599-52z6r</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.458s (1.458s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:02:05 -0300 -03" title="First Seen: 20:02:05">20:02:05</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-67f7466599-52z6r</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:02:05 -0300 -03" title="First Seen: 20:02:05">20:02:05</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-67f7466599-52z6r</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:02 -0300 -03" title="First Seen: 20:03:02">20:03:02</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-7cb58b47bc-9n6j2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:02 -0300 -03" title="First Seen: 20:03:02">20:03:02</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">vitrine</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set vitrine-7cb58b47bc from 0 to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:04 -0300 -03" title="First Seen: 20:03:04">20:03:04</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-9n6j2</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:04 -0300 -03" title="First Seen: 20:03:04">20:03:04</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-9n6j2</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.165/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:06 -0300 -03" title="First Seen: 20:03:06">20:03:06</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-9n6j2</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:06 -0300 -03" title="First Seen: 20:03:06">20:03:06</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-9n6j2</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:06 -0300 -03" title="First Seen: 20:03:06">20:03:06</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-9n6j2</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.964s (1.964s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:07 -0300 -03" title="First Seen: 20:03:07">20:03:07</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-67f7466599</p></td>
+      <td><p class="text-muted">SuccessfulDelete</p></td>
+      <td data-formatter="messageFormatter">Deleted pod: vitrine-67f7466599-52z6r</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:07 -0300 -03" title="First Seen: 20:03:07">20:03:07</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-7cb58b47bc-5rkvz</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:07 -0300 -03" title="First Seen: 20:03:07">20:03:07</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-67f7466599-52z6r</p></td>
+      <td><p class="text-danger">Killing</p></td>
+      <td data-formatter="messageFormatter">Stopping container nginx</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:07 -0300 -03" title="First Seen: 20:03:07">20:03:07</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">vitrine</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set vitrine-7cb58b47bc from 1 to 2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:07 -0300 -03" title="First Seen: 20:03:07">20:03:07</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">vitrine</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled down replica set vitrine-67f7466599 from 3 to 2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:09 -0300 -03" title="First Seen: 20:03:09">20:03:09</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-5rkvz</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:09 -0300 -03" title="First Seen: 20:03:09">20:03:09</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-5rkvz</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.166/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:11 -0300 -03" title="First Seen: 20:03:11">20:03:11</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-5rkvz</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:11 -0300 -03" title="First Seen: 20:03:11">20:03:11</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-5rkvz</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.799s (1.799s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:11 -0300 -03" title="First Seen: 20:03:11">20:03:11</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-5rkvz</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:12 -0300 -03" title="First Seen: 20:03:12">20:03:12</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">vitrine</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set vitrine-7cb58b47bc from 2 to 3</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:12 -0300 -03" title="First Seen: 20:03:12">20:03:12</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-67f7466599</p></td>
+      <td><p class="text-muted">SuccessfulDelete</p></td>
+      <td data-formatter="messageFormatter">Deleted pod: vitrine-67f7466599-jgst4</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:12 -0300 -03" title="First Seen: 20:03:12">20:03:12</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-7cb58b47bc-zrg47</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:12 -0300 -03" title="First Seen: 20:03:12">20:03:12</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-67f7466599-jgst4</p></td>
+      <td><p class="text-danger">Killing</p></td>
+      <td data-formatter="messageFormatter">Stopping container nginx</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:12 -0300 -03" title="First Seen: 20:03:12">20:03:12</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">vitrine</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled down replica set vitrine-67f7466599 from 2 to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:14 -0300 -03" title="First Seen: 20:03:14">20:03:14</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-zrg47</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.167/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:15 -0300 -03" title="First Seen: 20:03:15">20:03:15</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-zrg47</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:16 -0300 -03" title="First Seen: 20:03:16">20:03:16</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-zrg47</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:16 -0300 -03" title="First Seen: 20:03:16">20:03:16</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-zrg47</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.595s (1.595s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:16 -0300 -03" title="First Seen: 20:03:16">20:03:16</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-zrg47</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:17 -0300 -03" title="First Seen: 20:03:17">20:03:17</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-67f7466599</p></td>
+      <td><p class="text-muted">SuccessfulDelete</p></td>
+      <td data-formatter="messageFormatter">Deleted pod: vitrine-67f7466599-hkzrl</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:17 -0300 -03" title="First Seen: 20:03:17">20:03:17</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">vitrine</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled down replica set vitrine-67f7466599 from 1 to 0</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:03:18 -0300 -03" title="First Seen: 20:03:18">20:03:18</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-67f7466599-hkzrl</p></td>
+      <td><p class="text-danger">Killing</p></td>
+      <td data-formatter="messageFormatter">Stopping container nginx</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:16:21 -0300 -03" title="First Seen: 20:16:21">20:16:21</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">agenda-1-build</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.180/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:16:21 -0300 -03" title="First Seen: 20:16:21">20:16:21</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-1-build</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6777fef6d29428b11da4dade375e9353c86f5903036e4003a9a5311afe2adaa7&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:16:53 -0300 -03" title="First Seen: 20:16:53">20:16:53</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-1-build</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6777fef6d29428b11da4dade375e9353c86f5903036e4003a9a5311afe2adaa7&#34; in 31.914s (31.914s including waiting). Image size: 477198902 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:16:54 -0300 -03" title="First Seen: 20:16:54">20:16:54</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">build-controller</p></td>
+      <td><p class="truncated">agenda-1</p></td>
+      <td><p class="text-muted">BuildStarted</p></td>
+      <td data-formatter="messageFormatter">Build victor-dev/agenda-1 is now running</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:16:54 -0300 -03" title="First Seen: 20:16:54">20:16:54</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-1-build</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:16:54 -0300 -03" title="First Seen: 20:16:54">20:16:54</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-1-build</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:16:56 -0300 -03" title="First Seen: 20:16:56">20:16:56</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-1-build</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6777fef6d29428b11da4dade375e9353c86f5903036e4003a9a5311afe2adaa7&#34; already present on machine and can be accessed by the pod</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:16:57 -0300 -03" title="First Seen: 20:16:57">20:16:57</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-1-build</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:16:57 -0300 -03" title="First Seen: 20:16:57">20:16:57</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-1-build</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:16:59 -0300 -03" title="First Seen: 20:16:59">20:16:59</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-1-build</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6777fef6d29428b11da4dade375e9353c86f5903036e4003a9a5311afe2adaa7&#34; already present on machine and can be accessed by the pod</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:16:59 -0300 -03" title="First Seen: 20:16:59">20:16:59</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-1-build</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:16:59 -0300 -03" title="First Seen: 20:16:59">20:16:59</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-1-build</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:17:41 -0300 -03" title="First Seen: 20:17:41">20:17:41</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">build-controller</p></td>
+      <td><p class="truncated">agenda-1</p></td>
+      <td><p class="text-muted">BuildCompleted</p></td>
+      <td data-formatter="messageFormatter">Build victor-dev/agenda-1 completed successfully</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:17:44 -0300 -03" title="First Seen: 20:17:44">20:17:44</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">agenda-2-build</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.184/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:17:44 -0300 -03" title="First Seen: 20:17:44">20:17:44</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-2-build</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6777fef6d29428b11da4dade375e9353c86f5903036e4003a9a5311afe2adaa7&#34; already present on machine and can be accessed by the pod</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:17:45 -0300 -03" title="First Seen: 20:17:45">20:17:45</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-2-build</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:17:45 -0300 -03" title="First Seen: 20:17:45">20:17:45</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-2-build</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:17:45 -0300 -03" title="First Seen: 20:17:45">20:17:45</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">build-controller</p></td>
+      <td><p class="truncated">agenda-2</p></td>
+      <td><p class="text-muted">BuildStarted</p></td>
+      <td data-formatter="messageFormatter">Build victor-dev/agenda-2 is now running</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:17:46 -0300 -03" title="First Seen: 20:17:46">20:17:46</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-2-build</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6777fef6d29428b11da4dade375e9353c86f5903036e4003a9a5311afe2adaa7&#34; already present on machine and can be accessed by the pod</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:17:47 -0300 -03" title="First Seen: 20:17:47">20:17:47</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-2-build</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:17:47 -0300 -03" title="First Seen: 20:17:47">20:17:47</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-2-build</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6777fef6d29428b11da4dade375e9353c86f5903036e4003a9a5311afe2adaa7&#34; already present on machine and can be accessed by the pod</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:17:47 -0300 -03" title="First Seen: 20:17:47">20:17:47</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-2-build</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:17:48 -0300 -03" title="First Seen: 20:17:48">20:17:48</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-2-build</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:17:48 -0300 -03" title="First Seen: 20:17:48">20:17:48</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-2-build</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:18:16 -0300 -03" title="First Seen: 20:18:16">20:18:16</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">build-controller</p></td>
+      <td><p class="truncated">agenda-2</p></td>
+      <td><p class="text-muted">BuildCompleted</p></td>
+      <td data-formatter="messageFormatter">Build victor-dev/agenda-2 completed successfully</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:19:23 -0300 -03" title="First Seen: 20:19:23">20:19:23</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-3-build</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6777fef6d29428b11da4dade375e9353c86f5903036e4003a9a5311afe2adaa7&#34; already present on machine and can be accessed by the pod</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:19:23 -0300 -03" title="First Seen: 20:19:23">20:19:23</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">agenda-3-build</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.186/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:19:24 -0300 -03" title="First Seen: 20:19:24">20:19:24</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-3-build</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:19:24 -0300 -03" title="First Seen: 20:19:24">20:19:24</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-3-build</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:19:25 -0300 -03" title="First Seen: 20:19:25">20:19:25</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">build-controller</p></td>
+      <td><p class="truncated">agenda-3</p></td>
+      <td><p class="text-muted">BuildStarted</p></td>
+      <td data-formatter="messageFormatter">Build victor-dev/agenda-3 is now running</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:19:27 -0300 -03" title="First Seen: 20:19:27">20:19:27</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-3-build</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6777fef6d29428b11da4dade375e9353c86f5903036e4003a9a5311afe2adaa7&#34; already present on machine and can be accessed by the pod</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:19:28 -0300 -03" title="First Seen: 20:19:28">20:19:28</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-3-build</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:19:28 -0300 -03" title="First Seen: 20:19:28">20:19:28</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-3-build</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:19:28 -0300 -03" title="First Seen: 20:19:28">20:19:28</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-3-build</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6777fef6d29428b11da4dade375e9353c86f5903036e4003a9a5311afe2adaa7&#34; already present on machine and can be accessed by the pod</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:19:28 -0300 -03" title="First Seen: 20:19:28">20:19:28</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-3-build</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:19:28 -0300 -03" title="First Seen: 20:19:28">20:19:28</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">agenda-3-build</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:20:11 -0300 -03" title="First Seen: 20:20:11">20:20:11</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">build-controller</p></td>
+      <td><p class="truncated">agenda-3</p></td>
+      <td><p class="text-muted">BuildCompleted</p></td>
+      <td data-formatter="messageFormatter">Build victor-dev/agenda-3 completed successfully</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:25:52 -0300 -03" title="First Seen: 20:25:52">20:25:52</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">vitrine</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled down replica set vitrine-7cb58b47bc from 3 to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:25:52 -0300 -03" title="First Seen: 20:25:52">20:25:52</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc</p></td>
+      <td><p class="text-muted">SuccessfulDelete</p></td>
+      <td data-formatter="messageFormatter">Deleted pod: vitrine-7cb58b47bc-5rkvz</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:25:52 -0300 -03" title="First Seen: 20:25:52">20:25:52</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc</p></td>
+      <td><p class="text-muted">SuccessfulDelete</p></td>
+      <td data-formatter="messageFormatter">Deleted pod: vitrine-7cb58b47bc-zrg47</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:25:53 -0300 -03" title="First Seen: 20:25:53">20:25:53</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-5rkvz</p></td>
+      <td><p class="text-danger">Killing</p></td>
+      <td data-formatter="messageFormatter">Stopping container nginx</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:25:53 -0300 -03" title="First Seen: 20:25:53">20:25:53</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">persistentvolume-controller</p></td>
+      <td><p class="truncated">arquivos-agenda-pvc</p></td>
+      <td><p class="text-muted">WaitForFirstConsumer</p></td>
+      <td data-formatter="messageFormatter">waiting for first consumer to be created before binding</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:25:53 -0300 -03" title="First Seen: 20:25:53">20:25:53</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-zrg47</p></td>
+      <td><p class="text-danger">Killing</p></td>
+      <td data-formatter="messageFormatter">Stopping container nginx</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:25:54 -0300 -03" title="First Seen: 20:25:54">20:25:54</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">vitrine</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set vitrine-5c76469f5b from 0 to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:25:54 -0300 -03" title="First Seen: 20:25:54">20:25:54</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-5c76469f5b-c6qxh</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:25:54 -0300 -03" title="First Seen: 20:25:54">20:25:54</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">rancher.io/local-path_local-path-provisioner-54759fd9c5-ht82k_9efce530-3550-4aea-ba03-8334ec216884</p></td>
+      <td><p class="truncated">arquivos-agenda-pvc</p></td>
+      <td><p class="text-muted">Provisioning</p></td>
+      <td data-formatter="messageFormatter">External provisioner is provisioning volume for claim &#34;victor-dev/arquivos-agenda-pvc&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:25:55 -0300 -03" title="First Seen: 20:25:54">20:25:55</time> <small>(x3)</small></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">persistentvolume-controller</p></td>
+      <td><p class="truncated">arquivos-agenda-pvc</p></td>
+      <td><p class="text-muted">ExternalProvisioning</p></td>
+      <td data-formatter="messageFormatter">Waiting for a volume to be created either by the external provisioner &#39;rancher.io/local-path&#39; or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:02 -0300 -03" title="First Seen: 20:26:02">20:26:02</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">rancher.io/local-path_local-path-provisioner-54759fd9c5-ht82k_9efce530-3550-4aea-ba03-8334ec216884</p></td>
+      <td><p class="truncated">arquivos-agenda-pvc</p></td>
+      <td><p class="text-muted">ProvisioningSucceeded</p></td>
+      <td data-formatter="messageFormatter">Successfully provisioned volume pvc-14eb69a5-f8e5-40c5-a298-3674c9128435</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:05 -0300 -03" title="First Seen: 20:26:05">20:26:05</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-c6qxh</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:05 -0300 -03" title="First Seen: 20:26:05">20:26:05</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-c6qxh</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.194/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:07 -0300 -03" title="First Seen: 20:26:07">20:26:07</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-c6qxh</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.889s (1.889s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:08 -0300 -03" title="First Seen: 20:26:08">20:26:08</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-c6qxh</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:08 -0300 -03" title="First Seen: 20:26:08">20:26:08</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-c6qxh</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:09 -0300 -03" title="First Seen: 20:26:09">20:26:09</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc-9n6j2</p></td>
+      <td><p class="text-danger">Killing</p></td>
+      <td data-formatter="messageFormatter">Stopping container nginx</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:09 -0300 -03" title="First Seen: 20:26:09">20:26:09</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-5c76469f5b-58qx2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:09 -0300 -03" title="First Seen: 20:26:09">20:26:09</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">vitrine</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set vitrine-5c76469f5b from 1 to 3</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:09 -0300 -03" title="First Seen: 20:26:09">20:26:09</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">vitrine</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled down replica set vitrine-7cb58b47bc from 1 to 0</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:09 -0300 -03" title="First Seen: 20:26:09">20:26:09</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: vitrine-5c76469f5b-cg659</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:09 -0300 -03" title="First Seen: 20:26:09">20:26:09</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">vitrine-7cb58b47bc</p></td>
+      <td><p class="text-muted">SuccessfulDelete</p></td>
+      <td data-formatter="messageFormatter">Deleted pod: vitrine-7cb58b47bc-9n6j2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:12 -0300 -03" title="First Seen: 20:26:12">20:26:12</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-58qx2</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:12 -0300 -03" title="First Seen: 20:26:12">20:26:12</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-58qx2</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.195/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:13 -0300 -03" title="First Seen: 20:26:13">20:26:13</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-cg659</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.196/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:13 -0300 -03" title="First Seen: 20:26:13">20:26:13</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-cg659</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:14 -0300 -03" title="First Seen: 20:26:14">20:26:14</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-58qx2</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.559s (1.559s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:14 -0300 -03" title="First Seen: 20:26:14">20:26:14</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-58qx2</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:14 -0300 -03" title="First Seen: 20:26:14">20:26:14</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-58qx2</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:15 -0300 -03" title="First Seen: 20:26:15">20:26:15</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-cg659</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Container created</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:15 -0300 -03" title="First Seen: 20:26:15">20:26:15</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-cg659</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Container started</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2026-11-24 20:26:15 -0300 -03" title="First Seen: 20:26:15">20:26:15</time></td>
+      <td><p class="truncated">victor-dev</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">vitrine-5c76469f5b-cg659</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.access.redhat.com/ubi9/nginx-126:latest&#34; in 1.483s (1.483s including waiting). Image size: 339106241 bytes.</td>
+    </tr>
+    
+  </tbody>
+</table>
+
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/toolbar/bootstrap-table-toolbar.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/filter-control/bootstrap-table-filter-control.min.js" crossorigin="anonymous"></script>
+
+	<script>
+	function messageFormatter(value, row) {
+    	return '<code>'+value+'</code>'
+  	}
+    $(function() {
+      $('#events').bootstrapTable()
+    })
+	</script>
+  </body>
+</html>

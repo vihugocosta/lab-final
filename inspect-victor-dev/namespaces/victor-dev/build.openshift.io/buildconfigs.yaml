@@ -1,0 +1,77 @@
+---
+apiVersion: build.openshift.io/v1
+items:
+- apiVersion: build.openshift.io/v1
+  kind: BuildConfig
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"build.openshift.io/v1","kind":"BuildConfig","metadata":{"annotations":{},"name":"agenda","namespace":"victor-dev"},"spec":{"output":{"to":{"kind":"ImageStreamTag","name":"agenda:v1"}},"source":{"git":{"ref":"main","uri":"https://github.com/vihugocosta/lab3-openshift-app.git"},"type":"Git"},"strategy":{"dockerStrategy":{"dockerfilePath":"Dockerfile"},"type":"Docker"},"triggers":[{"type":"ConfigChange"},{"type":"ImageChange"}]}}
+    creationTimestamp: "2026-11-24T23:16:19Z"
+    generation: 4
+    managedFields:
+    - apiVersion: build.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          f:output:
+            f:to: {}
+          f:runPolicy: {}
+          f:source:
+            f:git:
+              .: {}
+              f:ref: {}
+              f:uri: {}
+            f:type: {}
+          f:strategy:
+            f:dockerStrategy:
+              .: {}
+              f:dockerfilePath: {}
+            f:type: {}
+          f:triggers: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2026-11-24T23:16:19Z"
+    - apiVersion: build.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:lastVersion: {}
+      manager: openshift-apiserver
+      operation: Update
+      time: "2026-11-24T23:19:21Z"
+    name: agenda
+    namespace: victor-dev
+    resourceVersion: "13783083"
+    uid: 07802954-848d-46f9-b3bf-fe987e67963b
+  spec:
+    failedBuildsHistoryLimit: 5
+    nodeSelector: null
+    output:
+      to:
+        kind: ImageStreamTag
+        name: agenda:v1
+    postCommit: {}
+    resources: {}
+    runPolicy: Serial
+    source:
+      git:
+        ref: main
+        uri: https://github.com/vihugocosta/lab3-openshift-app.git
+      type: Git
+    strategy:
+      dockerStrategy:
+        dockerfilePath: Dockerfile
+      type: Docker
+    successfulBuildsHistoryLimit: 5
+    triggers:
+    - type: ConfigChange
+  status:
+    lastVersion: 3
+kind: BuildConfigList
+metadata:
+  resourceVersion: "13795272"

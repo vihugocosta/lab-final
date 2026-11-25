@@ -1,0 +1,470 @@
+---
+apiVersion: apps/v1
+items:
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "3"
+      deployment.kubernetes.io/max-replicas: "4"
+      deployment.kubernetes.io/revision: "3"
+    creationTimestamp: "2026-11-24T23:25:54Z"
+    generation: 2
+    labels:
+      app: vitrine
+      pod-template-hash: 5c76469f5b
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"12f03a45-5367-4ef1-a9e3-ee46812a1f9a"}: {}
+        f:spec:
+          f:replicas: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:labels:
+                .: {}
+                f:app: {}
+                f:pod-template-hash: {}
+            f:spec:
+              f:containers:
+                k:{"name":"nginx"}:
+                  .: {}
+                  f:command: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8080,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:protocol: {}
+                  f:resources: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/opt/app-root/etc/nginx.default.d"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/opt/app-root/src/arquivos"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:volumes:
+                .: {}
+                k:{"name":"arquivos-agenda-pvc"}:
+                  .: {}
+                  f:name: {}
+                  f:persistentVolumeClaim:
+                    .: {}
+                    f:claimName: {}
+                k:{"name":"nginx-default-config"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                  f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-11-24T23:26:09Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+          f:terminatingReplicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2026-11-24T23:26:16Z"
+    name: vitrine-5c76469f5b
+    namespace: victor-dev
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: vitrine
+      uid: 12f03a45-5367-4ef1-a9e3-ee46812a1f9a
+    resourceVersion: "13786809"
+    uid: 333281da-eb73-4252-b9e1-8c768bf0a03a
+  spec:
+    replicas: 3
+    selector:
+      matchLabels:
+        app: vitrine
+        pod-template-hash: 5c76469f5b
+    template:
+      metadata:
+        labels:
+          app: vitrine
+          pod-template-hash: 5c76469f5b
+      spec:
+        containers:
+        - command:
+          - nginx
+          - -g
+          - daemon off;
+          image: registry.access.redhat.com/ubi9/nginx-126:latest
+          imagePullPolicy: Always
+          name: nginx
+          ports:
+          - containerPort: 8080
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /opt/app-root/etc/nginx.default.d
+            name: nginx-default-config
+            readOnly: true
+          - mountPath: /opt/app-root/src/arquivos
+            name: arquivos-agenda-pvc
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: agenda-sa
+        serviceAccountName: agenda-sa
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - configMap:
+            defaultMode: 420
+            name: vitrine-nginx
+          name: nginx-default-config
+        - name: arquivos-agenda-pvc
+          persistentVolumeClaim:
+            claimName: arquivos-agenda-pvc
+  status:
+    availableReplicas: 3
+    fullyLabeledReplicas: 3
+    observedGeneration: 2
+    readyReplicas: 3
+    replicas: 3
+    terminatingReplicas: 0
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "3"
+      deployment.kubernetes.io/max-replicas: "4"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2026-11-24T23:01:56Z"
+    generation: 4
+    labels:
+      app: vitrine
+      pod-template-hash: 67f7466599
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"12f03a45-5367-4ef1-a9e3-ee46812a1f9a"}: {}
+        f:spec:
+          f:replicas: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:labels:
+                .: {}
+                f:app: {}
+                f:pod-template-hash: {}
+            f:spec:
+              f:containers:
+                k:{"name":"nginx"}:
+                  .: {}
+                  f:command: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8080,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:protocol: {}
+                  f:resources: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/opt/app-root/etc/nginx.default.d"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:terminationGracePeriodSeconds: {}
+              f:volumes:
+                .: {}
+                k:{"name":"nginx-default-config"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                  f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-11-24T23:03:17Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:observedGeneration: {}
+          f:replicas: {}
+          f:terminatingReplicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2026-11-24T23:03:19Z"
+    name: vitrine-67f7466599
+    namespace: victor-dev
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: vitrine
+      uid: 12f03a45-5367-4ef1-a9e3-ee46812a1f9a
+    resourceVersion: "13774686"
+    uid: a227b9a8-a63b-4a3f-b27d-581d1bb0f974
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        app: vitrine
+        pod-template-hash: 67f7466599
+    template:
+      metadata:
+        labels:
+          app: vitrine
+          pod-template-hash: 67f7466599
+      spec:
+        containers:
+        - command:
+          - nginx
+          - -g
+          - daemon off;
+          image: registry.access.redhat.com/ubi9/nginx-126:latest
+          imagePullPolicy: Always
+          name: nginx
+          ports:
+          - containerPort: 8080
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /opt/app-root/etc/nginx.default.d
+            name: nginx-default-config
+            readOnly: true
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - configMap:
+            defaultMode: 420
+            name: vitrine-nginx
+          name: nginx-default-config
+  status:
+    observedGeneration: 4
+    replicas: 0
+    terminatingReplicas: 0
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "2"
+    creationTimestamp: "2026-11-24T23:03:02Z"
+    generation: 5
+    labels:
+      app: vitrine
+      pod-template-hash: 7cb58b47bc
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"12f03a45-5367-4ef1-a9e3-ee46812a1f9a"}: {}
+        f:spec:
+          f:replicas: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:labels:
+                .: {}
+                f:app: {}
+                f:pod-template-hash: {}
+            f:spec:
+              f:containers:
+                k:{"name":"nginx"}:
+                  .: {}
+                  f:command: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8080,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:protocol: {}
+                  f:resources: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/opt/app-root/etc/nginx.default.d"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:volumes:
+                .: {}
+                k:{"name":"nginx-default-config"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                  f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-11-24T23:26:09Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:observedGeneration: {}
+          f:replicas: {}
+          f:terminatingReplicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2026-11-24T23:26:11Z"
+    name: vitrine-7cb58b47bc
+    namespace: victor-dev
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: vitrine
+      uid: 12f03a45-5367-4ef1-a9e3-ee46812a1f9a
+    resourceVersion: "13786750"
+    uid: 0a02cde6-3137-42b1-9798-5344cdb358cb
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        app: vitrine
+        pod-template-hash: 7cb58b47bc
+    template:
+      metadata:
+        labels:
+          app: vitrine
+          pod-template-hash: 7cb58b47bc
+      spec:
+        containers:
+        - command:
+          - nginx
+          - -g
+          - daemon off;
+          image: registry.access.redhat.com/ubi9/nginx-126:latest
+          imagePullPolicy: Always
+          name: nginx
+          ports:
+          - containerPort: 8080
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /opt/app-root/etc/nginx.default.d
+            name: nginx-default-config
+            readOnly: true
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: agenda-sa
+        serviceAccountName: agenda-sa
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - configMap:
+            defaultMode: 420
+            name: vitrine-nginx
+          name: nginx-default-config
+  status:
+    observedGeneration: 5
+    replicas: 0
+    terminatingReplicas: 0
+kind: ReplicaSetList
+metadata:
+  resourceVersion: "13795271"

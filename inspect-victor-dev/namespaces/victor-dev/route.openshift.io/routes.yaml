@@ -1,0 +1,123 @@
+---
+apiVersion: route.openshift.io/v1
+items:
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2026-11-24T23:23:58Z"
+    generation: 1
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: oc.exe
+      operation: Update
+      time: "2026-11-24T23:23:58Z"
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:ingress: {}
+      manager: openshift-router
+      operation: Update
+      subresource: status
+      time: "2026-11-24T23:23:58Z"
+    name: vitrine
+    namespace: victor-dev
+    resourceVersion: "13785426"
+    uid: c8eef7dc-b225-4f03-9428-fa67275a40de
+  spec:
+    host: vitrine-victor-dev.apps.riopomba.aopatricio.com
+    port:
+      targetPort: 8080
+    to:
+      kind: Service
+      name: vitrine
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2026-11-24T23:23:58Z"
+        status: "True"
+        type: Admitted
+      host: vitrine-victor-dev.apps.riopomba.aopatricio.com
+      routerCanonicalHostname: router-default.apps.riopomba.aopatricio.com
+      routerName: default
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2026-11-24T23:23:58Z"
+    generation: 1
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:tls:
+            .: {}
+            f:insecureEdgeTerminationPolicy: {}
+            f:termination: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: oc.exe
+      operation: Update
+      time: "2026-11-24T23:23:58Z"
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:ingress: {}
+      manager: openshift-router
+      operation: Update
+      subresource: status
+      time: "2026-11-24T23:23:58Z"
+    name: vitrine-tls
+    namespace: victor-dev
+    resourceVersion: "13785435"
+    uid: 685fa53b-39ca-40e9-8c67-9d3f262add12
+  spec:
+    host: vitrine-tls-victor-dev.apps.riopomba.aopatricio.com
+    port:
+      targetPort: 8080
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: edge
+    to:
+      kind: Service
+      name: vitrine
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2026-11-24T23:23:58Z"
+        status: "True"
+        type: Admitted
+      host: vitrine-tls-victor-dev.apps.riopomba.aopatricio.com
+      routerCanonicalHostname: router-default.apps.riopomba.aopatricio.com
+      routerName: default
+      wildcardPolicy: None
+kind: RouteList
+metadata:
+  resourceVersion: "13795273"

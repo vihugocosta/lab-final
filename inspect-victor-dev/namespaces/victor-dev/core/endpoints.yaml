@@ -1,0 +1,59 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-11-24T23:26:16Z"
+    creationTimestamp: "2026-11-24T23:23:57Z"
+    labels:
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-11-24T23:26:16Z"
+    name: vitrine
+    namespace: victor-dev
+    resourceVersion: "13786807"
+    uid: faad9ec2-03e3-4862-81b2-130a74b839f6
+  subsets:
+  - addresses:
+    - ip: 10.128.0.194
+      nodeName: cluster-riopomba
+      targetRef:
+        kind: Pod
+        name: vitrine-5c76469f5b-c6qxh
+        namespace: victor-dev
+        uid: e6710c38-80d7-4cdb-96d8-92fd3db66939
+    - ip: 10.128.0.195
+      nodeName: cluster-riopomba
+      targetRef:
+        kind: Pod
+        name: vitrine-5c76469f5b-58qx2
+        namespace: victor-dev
+        uid: ed737f91-40ea-44d9-a18c-f125b9929929
+    - ip: 10.128.0.196
+      nodeName: cluster-riopomba
+      targetRef:
+        kind: Pod
+        name: vitrine-5c76469f5b-cg659
+        namespace: victor-dev
+        uid: 18962c0b-7052-45e5-a5c4-afc8256582aa
+    ports:
+    - port: 8080
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "13795277"

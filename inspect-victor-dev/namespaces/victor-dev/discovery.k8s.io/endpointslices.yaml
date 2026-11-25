@@ -1,0 +1,92 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.194
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: cluster-riopomba
+    targetRef:
+      kind: Pod
+      name: vitrine-5c76469f5b-c6qxh
+      namespace: victor-dev
+      uid: e6710c38-80d7-4cdb-96d8-92fd3db66939
+  - addresses:
+    - 10.128.0.195
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: cluster-riopomba
+    targetRef:
+      kind: Pod
+      name: vitrine-5c76469f5b-58qx2
+      namespace: victor-dev
+      uid: ed737f91-40ea-44d9-a18c-f125b9929929
+  - addresses:
+    - 10.128.0.196
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: cluster-riopomba
+    targetRef:
+      kind: Pod
+      name: vitrine-5c76469f5b-cg659
+      namespace: victor-dev
+      uid: 18962c0b-7052-45e5-a5c4-afc8256582aa
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-11-24T23:26:16Z"
+    creationTimestamp: "2026-11-24T23:23:57Z"
+    generateName: vitrine-
+    generation: 10
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: vitrine
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"d109fb43-92f8-4aa9-8734-4999a5ea55b6"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-11-24T23:26:16Z"
+    name: vitrine-przws
+    namespace: victor-dev
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: vitrine
+      uid: d109fb43-92f8-4aa9-8734-4999a5ea55b6
+    resourceVersion: "13786808"
+    uid: 700878c3-7a64-40ae-8ef5-6fb14c6a528d
+  ports:
+  - name: ""
+    port: 8080
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "13795277"

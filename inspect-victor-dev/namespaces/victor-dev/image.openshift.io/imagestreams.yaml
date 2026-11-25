@@ -1,0 +1,49 @@
+---
+apiVersion: image.openshift.io/v1
+items:
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"image.openshift.io/v1","kind":"ImageStream","metadata":{"annotations":{},"name":"agenda","namespace":"victor-dev"},"spec":{"lookupPolicy":{"local":false}},"status":{"dockerImageRepository":""}}
+    creationTimestamp: "2026-11-24T23:16:18Z"
+    generation: 1
+    managedFields:
+    - apiVersion: image.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2026-11-24T23:16:18Z"
+    name: agenda
+    namespace: victor-dev
+    resourceVersion: "13783506"
+    uid: b6eb1b6d-0000-4c30-8183-a92a35210b6c
+  spec:
+    lookupPolicy:
+      local: false
+  status:
+    dockerImageRepository: image-registry.openshift-image-registry.svc:5000/victor-dev/agenda
+    tags:
+    - items:
+      - created: "2026-11-24T23:20:08Z"
+        dockerImageReference: image-registry.openshift-image-registry.svc:5000/victor-dev/agenda@sha256:171ea97d55249893a4cee6f071abfeb5d819ad43cd259e879240bbcf3666fe87
+        generation: 1
+        image: sha256:171ea97d55249893a4cee6f071abfeb5d819ad43cd259e879240bbcf3666fe87
+      - created: "2026-11-24T23:18:13Z"
+        dockerImageReference: image-registry.openshift-image-registry.svc:5000/victor-dev/agenda@sha256:f7b090cf7e53738d87ba101fff71543ac6b184849349c0961db39e7b493227af
+        generation: 1
+        image: sha256:f7b090cf7e53738d87ba101fff71543ac6b184849349c0961db39e7b493227af
+      - created: "2026-11-24T23:17:38Z"
+        dockerImageReference: image-registry.openshift-image-registry.svc:5000/victor-dev/agenda@sha256:4cf9c5bbd33457366d3279b2dc7124d1336e3312f01c1c7940bb74ad966fc4fa
+        generation: 1
+        image: sha256:4cf9c5bbd33457366d3279b2dc7124d1336e3312f01c1c7940bb74ad966fc4fa
+      tag: v1
+kind: ImageStreamList
+metadata:
+  resourceVersion: "13795272"

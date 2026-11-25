@@ -1,0 +1,93 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"PersistentVolumeClaim","metadata":{"annotations":{},"name":"arquivos-agenda-pvc","namespace":"victor-dev"},"spec":{"accessModes":["ReadWriteOnce"],"resources":{"requests":{"storage":"2Gi"}}}}
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: rancher.io/local-path
+      volume.kubernetes.io/selected-node: cluster-riopomba
+      volume.kubernetes.io/storage-provisioner: rancher.io/local-path
+    creationTimestamp: "2026-11-24T23:25:53Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          f:accessModes: {}
+          f:resources:
+            f:requests:
+              .: {}
+              f:storage: {}
+          f:volumeMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2026-11-24T23:25:53Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:volume.kubernetes.io/selected-node: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-11-24T23:25:54Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:pv.kubernetes.io/bind-completed: {}
+            f:pv.kubernetes.io/bound-by-controller: {}
+            f:volume.beta.kubernetes.io/storage-provisioner: {}
+            f:volume.kubernetes.io/storage-provisioner: {}
+        f:spec:
+          f:volumeName: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-11-24T23:26:02Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:accessModes: {}
+          f:capacity:
+            .: {}
+            f:storage: {}
+          f:phase: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2026-11-24T23:26:02Z"
+    name: arquivos-agenda-pvc
+    namespace: victor-dev
+    resourceVersion: "13786621"
+    uid: 14eb69a5-f8e5-40c5-a298-3674c9128435
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 2Gi
+    storageClassName: local-path
+    volumeMode: Filesystem
+    volumeName: pvc-14eb69a5-f8e5-40c5-a298-3674c9128435
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 2Gi
+    phase: Bound
+kind: PersistentVolumeClaimList
+metadata:
+  resourceVersion: "13795277"
