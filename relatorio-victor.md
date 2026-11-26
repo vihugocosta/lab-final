@@ -249,3 +249,74 @@ Um `git push` pode ser recebido por uma configuracao de Trigger/Interceptor ou p
 2. Uma task publica um `results` e outra Pipeline Task o usa com uma referencia como `$(tasks.nome.results.RESULTADO)`.
 3. As credenciais ficam na ServiceAccount para serem entregues ao processo de execucao sem serem codificadas nos steps ou no Pipeline.
 4. CI nao deve fazer deploy direto em producao porque separa verificacao e construcao da decisao de promocao, preservando aprovacao, rastreabilidade e recuperacao pelo Git.
+
+## 9.1 - Verificacao do GitOps
+
+- Operator OpenShift GitOps: `Succeeded`, versao do operator `1.22.4`.
+- Endereco do servidor Argo CD: `openshift-gitops-server-openshift-gitops.apps.riopomba.aopatricio.com`.
+- Login SSO: concluido com sucesso.
+- Usuario autenticado: `victor.menezes`.
+- Cliente Argo CD: `v3.6.3+b4accc4`.
+- Servidor Argo CD: `v3.5.7+6d73296`, OpenShift GitOps `v1.22.4`.
+
+## 9.2 - Namespaces para o Argo CD
+
+- Comando solicitado: `oc label namespace victor-dev victor-prod argocd.argoproj.io/managed-by=openshift-gitops --overwrite`
+- Resultado: negado por RBAC. O usuario `victor.menezes` nao pode alterar (`patch`) os recursos `Namespace`.
+- Confirmacao atual dos dois namespaces:
+  - `victor-dev`: sem o rotulo `argocd.argoproj.io/managed-by`.
+  - `victor-prod`: sem o rotulo `argocd.argoproj.io/managed-by`.
+- Saida do `oc get namespace victor-dev victor-prod --show-labels`:
+
+```text
+NAME          STATUS   AGE   LABELS
+victor-dev    Active   2d    kubernetes.io/metadata.name=victor-dev,openshift-pipelines.tekton.dev/namespace-reconcile-version=1.24.3,openshift-pipelines.tekton.dev/namespace-trusted-configmaps-version=1.24.3,pod-security.kubernetes.io/audit-version=latest,pod-security.kubernetes.io/audit=baseline,pod-security.kubernetes.io/warn-version=latest,pod-security.kubernetes.io/warn=baseline
+victor-prod   Active   46h   kubernetes.io/metadata.name=victor-prod,openshift-pipelines.tekton.dev/namespace-reconcile-version=1.24.3,openshift-pipelines.tekton.dev/namespace-trusted-configmaps-version=1.24.3,pod-security.kubernetes.io/audit-version=latest,pod-security.kubernetes.io/audit=baseline,pod-security.kubernetes.io/warn-version=latest,pod-security.kubernetes.io/warn=baseline
+```
+
+## 9.3 - Imagem nos overlays
+
+- Repositorio: `lab3-openshift-config`.
+- Arquivos alterados: `overlays/dev/kustomization.yaml` e `overlays/prod/kustomization.yaml`.
+- Imagem configurada nos dois overlays:
+  `image-registry.openshift-image-registry.svc:5000/victor-dev/agenda:v1`.
+- Validacao local:
+  - `oc kustomize overlays/dev`: renderizou sem erro.
+  - `oc kustomize overlays/prod`: renderizou sem erro.
+- Commit enviado ao branch `main`: `80bfe3c0ba247225eec108bdfba178e45716b551`.
+
+## 9.4 - Application agenda-dev
+
+- Application: `agenda-dev`, namespace `openshift-gitops`.
+- Repositorio: `https://github.com/vihugocosta/lab3-openshift-config.git`.
+- Branch: `main`.
+- Caminho: `overlays/dev`.
+- Destino: cluster local, projeto `victor-dev`.
+- Sincronizacao automatica: ativa.
+- Remocao de recursos saidos do Git (`prune`): ativa.
+- Reversao de alteracoes manuais (`selfHeal`): ativa.
+- Estado de sincronizacao: `Synced to main (80bfe3c)`.
+- Estado de saude: `Healthy`.
+- Recursos criados no projeto `victor-dev`: `Service/agenda-web`, `Deployment/agenda-web` e `Route/agenda-web`.
+- Deployment: `1/1` pronto.
+- Imagem: `image-registry.openshift-image-registry.svc:5000/victor-dev/agenda:v1`.
+
+## 9.5 - Autocorrecao de replicas
+
+- O Deployment `agenda-web` foi escalado manualmente para 4 replicas.
+- Resultado final: `1` replica desejada e `1` pronta.
+- Motivo: o self-heal do Argo CD detectou a alteracao manual e reconciliou o Deployment para o valor declarado no Git (`replicas: 1`).
+
+## 9.6 - Promocao da agenda para v2
+
+- Fork da aplicacao: `vihugocosta/lab3-openshift-app`.
+- `index.html` atualizado para exibir `versão 2`; commit enviado ao branch `main`: `d98dc0a0cffccf0d7bb5713769b8143a2d90a6bd`.
+- PipelineRun bem-sucedido: `agenda-pipeline-v2-retry-xqdnn`.
+- Imagem publicada: `image-registry.openshift-image-registry.svc:5000/victor-dev/agenda:v2`.
+- Digest: `sha256:eab1c0a1a224df54d4d8ccaa991ebab8624d957e2da35a07d72f9e410801ac99`.
+- O primeiro PipelineRun compilou a imagem, mas falhou no push por credencial expirada. O Secret `registry-agenda` foi atualizado com a credencial atual do usuario para permitir a nova execucao; nenhum valor de credencial foi registrado.
+- Overlay `overlays/dev` atualizado para `newTag: v2`; commit enviado ao branch `main` do fork `lab3-openshift-config`: `04f6d57e2bc71a759971daa2c37d7b43f9134e53`.
+- A Application `agenda-dev` foi sincronizada para `04f6d57` e ficou `Synced` e `Healthy`.
+- Deployment `agenda-web`: imagem `image-registry.openshift-image-registry.svc:5000/victor-dev/agenda:v2`, `1/1` replica pronta.
+- Digest executado pelo pod: `sha256:eab1c0a1a224df54d4d8ccaa991ebab8624d957e2da35a07d72f9e410801ac99`.
+- Route `http://agenda-web-victor-dev.apps.riopomba.aopatricio.com`: HTTP `200`; resposta contem `versão 2`.
